@@ -587,7 +587,7 @@ video {
 }
 
 .scroll-text {
-  border: 1px solid red; 
+  /* border: 1px solid red; */
   font-size: 1em;
   margin: 0px 30px;
   padding: 5px;
