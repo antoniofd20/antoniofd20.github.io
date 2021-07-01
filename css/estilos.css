@@ -529,9 +529,9 @@ height: 10em;
 }
 
 .scroll-grid {
-  width: 80vw;
+  width: 90vw;
   min-height: 60vh;
-  /*border: 1px solid red;*/
+  border: 1px solid red;
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -588,12 +588,25 @@ video {
 
 .scroll-text {
   /* border: 1px solid red; */
+  font-size: 1em;
   margin: 0px 30px;
-  padding: 10px 20px;
+  padding: 5px;
   opacity: 0;
   color: var(--text-primary);
   text-align: justify;
   transform: translate(0px, 50px);
+}
+
+@media screen and (max-width: 850px) {
+  .scroll-text {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .scroll-text {
+    font-size: .5em;
+  }
 }
 
 progress {
