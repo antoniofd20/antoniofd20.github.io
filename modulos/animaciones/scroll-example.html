@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    
+    <!-- Metadatos básicos y codificación -->
+    <!-- ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Metadatos específicos para móvil -->
+    <!-- ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!-- Metadatos para posicionamiento en buscadores -->
+    <!-- ================================================== -->
+    <meta name="author" content="Raymundo Antonio Flores D.">
+    <meta name="copyright" content="RAFD" />
+    <!--
+    <link rel="canonical" href="http://www.erp-inspecciones-ttsa.com.mx">
+    <link rel="shortlink" href="http://www.erp-inspecciones-ttsa.com.mx">
+    -->
+
+
+    <!-- Iconos para página y dispositivos móviles -->
+    <!-- ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="msapplication-TileImage" content="favicon.ico" />
+    <meta name="msapplication-TileColor" content="#488199" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/ico_empresa.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/ico_empresa.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/ico_empresa.png">
+    <link rel="apple-touch-icon" sizes="244x244" href="/img/ico_empresa.png">
+
+
+    <!-- BOOTSTRAP -->
+    <!-- ================================================== -->
+    <!-- <link rel="stylesheet" href="/librerias/bootstrap/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/librerias/bootstrap/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+
+    <!-- FONTAWESOME -->
+    <!-- ================================================== -->
+    <!-- <link rel="stylesheet" href="/librerias/fontawesome/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="/librerias/fontawesome/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- ================================================== -->
+    <!-- <script src="/librerias/jquery/jquery.min.js"></script> -->
+    <!-- <script src="/librerias/bootstrap/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- Estilos CSS -->
+    <!-- ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../css/estilos.css" />
+
+
+    <!-- Libreria GSAP para movimientos -->
+    <!-- ================================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+    <!-- Titulo -->
+    <!-- ================================================== -->
+    <title>Animaciones</title>
+  </head>
+
+
+  <body>
+    <progress max="100" value="0"></progress>
+    <header>
+    </header>
+
+    <!-- CUERPO DE LA PAGINA -->
+    <main>
+      <div class="scroll-title">
+        <p class="uno">Ve de abajo hacia arriba para ver las diferentes animaciones</p>
+      </div>
+
+      <div class="scroll-grid">
+        <div class="scroll-img" id="img-uno">
+          <video autoplay muted loop src="../../img/isla.mp4"></video>
+        </div>
+        <div class="scroll-text">
+          <h3>Titulo 1</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quod aut illo itaque quam laborum ipsam doloremque suscipit veniam maxime. Blanditiis modi voluptates repellendus excepturi? Optio minima quam laudantium nostrum voluptas et quidem tempora, vitae exercitationem ea, illum harum repellat a magni omnis voluptate assumenda alias officia numquam quaerat, debitis iure modi nobis iste! Rerum molestiae ut qui nemo possimus vel facere sit id suscipit accusamus accusantium alias, aut beatae in dicta quas velit. Nesciunt nulla minus neque consequatur est?</p>
+        </div>
+      </div>
+
+
+
+      <div class="scroll-grid from-right">
+        <div class="scroll-text">
+          <h3>Titulo 2</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quod aut illo itaque quam laborum ipsam doloremque suscipit veniam maxime. Blanditiis modi voluptates repellendus excepturi? Optio minima quam laudantium nostrum voluptas et quidem tempora, vitae exercitationem ea, illum harum repellat a magni omnis voluptate assumenda alias officia numquam quaerat, debitis iure modi nobis iste! Rerum molestiae ut qui nemo possimus vel facere sit id suscipit accusamus accusantium alias, aut beatae in dicta quas velit. Nesciunt nulla minus neque consequatur est?</p>
+        </div>
+        <div class="scroll-img" id="img-dos">
+          <video autoplay muted loop src="../../img/paisaje.mp4"></video>
+        </div>
+      </div>
+
+
+
+      <div class="scroll-grid">
+        <div class="scroll-img" id="img-tres"></div>
+        <div class="scroll-text">
+          <h3>Titulo 3</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quod aut illo itaque quam laborum ipsam doloremque suscipit veniam maxime. Blanditiis modi voluptates repellendus excepturi? Optio minima quam laudantium nostrum voluptas et quidem tempora, vitae exercitationem ea, illum harum repellat a magni omnis voluptate assumenda alias officia numquam quaerat, debitis iure modi nobis iste! Rerum molestiae ut qui nemo possimus vel facere sit id suscipit accusamus accusantium alias, aut beatae in dicta quas velit. Nesciunt nulla minus neque consequatur est?</p>
+        </div>
+      </div>
+
+
+
+      <div class="scroll-grid from-right">
+        <div class="scroll-text">
+          <h3>Titulo 4</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quod aut illo itaque quam laborum ipsam doloremque suscipit veniam maxime. Blanditiis modi voluptates repellendus excepturi? Optio minima quam laudantium nostrum voluptas et quidem tempora, vitae exercitationem ea, illum harum repellat a magni omnis voluptate assumenda alias officia numquam quaerat, debitis iure modi nobis iste! Rerum molestiae ut qui nemo possimus vel facere sit id suscipit accusamus accusantium alias, aut beatae in dicta quas velit. Nesciunt nulla minus neque consequatur est?</p>
+        </div>
+        <div class="scroll-img" id="img-cuatro"></div>
+      </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="botonera">
+          <a href="index.html" class="btn regresar">Regresar</a> 
+        </div>
+        Raymundo Antonio Flores Diaz
+    </footer>
+
+    <script>
+      // AGREGAR ANIMACIONES AL HACER SCROLL
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to('progress', {
+        value: 100,
+        ease: 'none',
+        scrollTrigger: {scrub: 0.3}
+      })
+
+      gsap.to('.uno', {
+        scrollTrigger: {
+          trigger: ".uno",
+          toggleActions: "restart pause restart none"
+        },
+        y: 0,
+        ease: 'expo',
+        opacity: 1,
+        duration: 3
+      })
+
+      let imagenes = document.querySelectorAll(".scroll-img")
+      imagenes.forEach(value => {
+        gsap.to(value, {
+          scrollTrigger: {
+            trigger: value,
+            toggleActions: "restart pause restart none"
+          },
+          x: 0,
+          ease: 'expo',
+          opacity: 1,
+          duration: 4
+        })
+      })
+
+      let textos = document.querySelectorAll(".scroll-text")
+      textos.forEach(value => {
+        gsap.to(value, {
+        scrollTrigger: {
+          trigger: value,
+          toggleActions: "restart pause restart none"
+        },
+        y: 0,
+        ease: 'bounce',
+        opacity: 1,
+        duration: 2
+      })
+      })
+
+    </script>
+  </body>
+</html>
