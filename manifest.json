@@ -11,38 +11,32 @@
   "lang": "es-MX",
   "icons": [
     {
-      "src": "img/ray_flores.png",
-      "background_color": "#212121",
+      "src": "img/negro_1000.png",
       "sizes": "1000x1000",
       "type": "image/png"
     },
     {
-      "src": "img/ray_flores_512.png",
-      "background_color": "#212121",
+      "src": "img/negro_512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "img/ray_flores_384.png",
-      "background_color": "#212121",
+      "src": "img/negro_384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "img/ray_flores_256.png",
-      "background_color": "#212121",
+      "src": "img/negro_256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "img/ray_flores_192.png",
-      "background_color": "#212121",
+      "src": "img/negro_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "img/ray_flores_128.png",
-      "background_color": "#212121",
+      "src": "img/negro_128.png",
       "sizes": "128x128",
       "type": "image/png"
     }

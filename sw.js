@@ -10,7 +10,8 @@ const CACHE_NAME = 'v1_cache_</>',
     './css/estilos.css',
     './script.js',
     './img/ray_flores.png',
-    './favicon.ico'
+    './favicon.ico',
+    'img/negro_1000.png'
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
