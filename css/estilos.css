@@ -664,8 +664,8 @@ progress::-moz-progress-bar {
 
   background: var(--dark-primary-solid);
 
-  font-size: 2.5em;
-  letter-spacing: 20px;
+  font-size: 2em;
+  letter-spacing: 15px;
   text-align: center;
 }
 
