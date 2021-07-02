@@ -632,3 +632,46 @@ progress::-moz-progress-bar {
   background: linear-gradient(to left, #db38b5,#01b3e3,#25ce7b,#fdc741,#ff6b01,#fc4236);
   background-attachment: fixed;
 }
+
+
+
+
+
+/* LOADER SENCILLO */
+.loader-sencillo {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
+
+  background: var(--dark-primary-solid);
+
+  font-size: 2.5em;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+.loader-sencillo span {
+  opacity: 0;
+  color: var(--text-primary);
+  display: flex;
+  padding-left: .2em;
+}

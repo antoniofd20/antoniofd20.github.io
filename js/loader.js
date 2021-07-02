@@ -7,7 +7,7 @@ document.body.appendChild($divLoader)
 
 // Crear imagen
 let $img = new Image()
-$img.src = "../img/parallax01.png"
+$img.src = "../img/ray_flores.png"
 $img.className = "loader-img"
 
 $divLoader.appendChild($img)
