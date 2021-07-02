@@ -1,5 +1,5 @@
 let loader = document.createElement("div"),
-          textCargando = document.createTextNode("Cargando...")
+          textCargando = document.createTextNode("Cargando")
           
       loader.className = "loader-sencillo"
       loader.appendChild(textCargando)
