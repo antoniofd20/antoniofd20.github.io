@@ -275,7 +275,7 @@ footer {
   max-width: 80%;
   margin: 5px auto;
   letter-spacing: 8px;
-  transform: translate(-0%, -50px);
+  transform: translate(-0%, -100px);
   
   z-index: 150;
   /*border: 1px solid red;*/
@@ -541,7 +541,7 @@ height: 10em;
 .from-right {
   margin-left: 20vw;
   grid-template-columns: 60% 40%;
-  grid-template-rows: 50vh;
+  grid-template-rows: 50vh; 
 }
 
 .scroll-img {
@@ -674,4 +674,42 @@ progress::-moz-progress-bar {
   color: var(--text-primary);
   display: flex;
   padding-left: .2em;
+}
+
+
+
+/* ESTILOS PARA FIGURA CONTROLADA POR EL TECLADO */
+.container-figura {
+  width: 80vw;
+  margin: 0px auto;
+
+}
+
+.area-juego {
+  /* border: 2px solid yellow; */
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.figura {
+  border: 2px solid rgb(223, 58, 39);
+
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: salmon;
+  transform: translate(-400px);
+}
+
+.laser {
+  height: 15px;
+  width: 50px;
+  border: 2px solid green;
+  background-color: rgb(3, 212, 3);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;  
+  transform: translate(400px);
 }
