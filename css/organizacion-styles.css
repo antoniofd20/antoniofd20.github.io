@@ -33,7 +33,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   background-color: var(--dark-solid);
   display: grid; 
@@ -77,14 +77,14 @@ footer {
 
 /* ANIMACIONES 01 */
 .encabezado-animado{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: block;
   padding-top: 40vh;
 }
 
 .hero {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -186,7 +186,7 @@ footer {
 }
 
 .parallax {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-position: center;
   background-size: cover;

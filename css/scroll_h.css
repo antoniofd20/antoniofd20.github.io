@@ -1,0 +1,141 @@
+/* Most of these styles could be removed but are for the demo to look better */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-weight: 300;
+  scroll-behavior:smooth;
+  
+}
+
+.body::-webkit-scrollbar {display: none;}
+
+/* navegador */
+.header {
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+
+  min-width: 100%;
+  background-color: black;
+}
+
+.navegador {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navegador li {
+  list-style: none;
+  margin: 0 5px;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navegador li:hover {
+
+  background-color: rgb(88, 88, 88);
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.anchor {
+  text-decoration: none;
+}
+
+.anchor:hover, .anchor:visited, .anchor:active, .anchor:focus {
+  text-decoration: none;
+  color: white;
+}
+
+
+a {
+  color: white;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: gray;
+}
+
+
+.contenedor-paneles {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+  text-align: left;
+  border-right: 1px solid #f00;
+  padding-top: 80px;
+  text-align: justify;
+}
+
+.panel-1 { background-color: lightblue;}
+.panel-2 { background-color: lightcoral;}
+.panel-3 { background-color: lightgreen;}
+.panel-4 { background-color: lightslategrey;}
+.panel-5 { background-color: lemonchiffon;}
+
+.panel-final { 
+  padding-top: 80px;
+  color: white;
+  background-color: darkslategray;
+}
+
+
+progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  border: none;
+  background: transparent;
+  z-index: 9999;
+}
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  background: black;
+  background-attachment: fixed;
+}
+progress::-moz-progress-bar {
+  background: black;
+  background-attachment: fixed;
+}
