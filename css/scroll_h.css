@@ -76,11 +76,32 @@ h2 {
   overflow: hidden;
 }
 
+/* EFECTO PARALLAX */
+.parallax {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: gray;
+  color: white;
+
+  background-image: url(../img/parallax03.jpg);
+  filter: sepia(50%);
+}
+
+.intro h1 {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.589);
 }
 
 
@@ -94,7 +115,8 @@ h2 {
   padding: 0;
   overflow: hidden;
   background-color: #ddd;
-  width: 500%;
+  /* CAMBIAR EL VALOR A NUMERO DE SECCIONES */
+  width: 300%;
 }
 
 
@@ -108,22 +130,63 @@ h2 {
   display: flex;
   color: #333;
   text-align: left;
-  border-right: 1px solid #f00;
+  /*border-right: 1px solid #f00;*/
   padding-top: 80px;
+  padding-bottom: 80px;
   text-align: justify;
 }
 
-.panel-1 { background-color: lightblue;}
+.container {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+/*.panel-1 { background-color: lightblue;}*/
 .panel-2 { background-color: lightcoral;}
 .panel-3 { background-color: lightgreen;}
 .panel-4 { background-color: lightslategrey;}
 .panel-5 { background-color: lemonchiffon;}
 
+.panel-1 {
+  background-image: url(../img/parallax02.jpg);
+  filter: sepia(50%);
+}
+.panel-2 { 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/parallax01.png);
+  filter: sepia(50%);
+}
+.panel-3 { 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/parallax03.jpg);
+  filter: sepia(50%);
+}
+.panel-4 { 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/parallax01.png);
+  filter: sepia(50%);
+}
+.panel-5 { 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/parallax03.jpg);
+  filter: sepia(50%);
+}
+
 .panel-final { 
   padding-top: 80px;
   color: white;
-  background-color: darkslategray;
+  background-image: url(../img/parallax02.jpg);
+  filter: sepia(50%);
 }
+
 
 
 
@@ -146,11 +209,11 @@ progress::-webkit-progress-bar {
   background: transparent;
 }
 progress::-webkit-progress-value {
-  background: black;
+  background: blue;
   background-attachment: fixed;
 }
 progress::-moz-progress-bar {
-  background: black;
+  background: blue;
   background-attachment: fixed;
 }
 

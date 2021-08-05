@@ -98,7 +98,7 @@
         <main id="content">
       
           <!-- SECCION INICIAL -->
-          <section id="intro" class="full-screen intro">
+          <section id="intro" class="full-screen intro parallax">
             <h1>Inicio</h1>
           </section>
       
@@ -108,7 +108,7 @@
             <div id="panels-container" class="contenedor-paneles"> <!-- ACTUALIZAR ANCHO DEPENDIENDO DEL NUMERO DE SECCIONES -->
               
               <!-- SEPARAR TODOS LOS CONTENEDORES POR ARTICULOS-->
-              <article id="panel-1" class="panel full-screen panel-1">
+              <article id="panel-1" class="panel full-screen panel-1 parallax">
                 <div class="container">
                   <!-- CONTENIDO DEL PANEL -->
                   <h2>Panel 1</h2>
@@ -141,7 +141,7 @@
               </article>
 
 
-              <article id="panel-4" class="panel full-screen panel-4">
+              <!--<article id="panel-4" class="panel full-screen panel-4">
                 <div class="container">
                   <h2>Panel 4</h2>
   
@@ -160,12 +160,12 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
                   </p>
                 </div>
-              </article>
+              </article>-->
 
             </div>
           </section>
       
-          <section id="final" class="full-screen panel-final">
+          <section id="final" class="full-screen panel-final parallax">
               <h1>Final</h1>
           </section>
 
@@ -218,7 +218,7 @@
           // multipliclar alto por numero de secciones verticales
           // multiplicar ancho por numero de secciones horizontales - 1
           alto = alto * 2
-          ancho = ancho * 4
+          ancho = ancho * 2
           scrollTotal = alto + ancho 
 
           gsap.to('progress', {
