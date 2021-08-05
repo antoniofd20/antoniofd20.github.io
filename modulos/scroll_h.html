@@ -85,11 +85,11 @@
         <header id="" class="header" role="banner">
           <ul class="navegador">
             <li><a href="#intro" class="anchor">Inicio</a></li>
-            <li><a href="#panel-1" class="anchor">Panel 1</a></li>
-            <li><a href="#panel-2" class="anchor">Panel 2</a></li>
-            <li><a href="#panel-3" class="anchor">Panel 3</a></li>
-            <li><a href="#panel-4" class="anchor">Panel 4</a></li>
-            <li><a href="#panel-5" class="anchor">Panel 5</a></li>
+            <li><a href="#panel-1" class="anchor"><span class="text-panel">Panel </span>1</a></li>
+            <li><a href="#panel-2" class="anchor"><span class="text-panel">Panel </span>2</a></li>
+            <li><a href="#panel-3" class="anchor"><span class="text-panel">Panel </span>3</a></li>
+            <li><a href="#panel-4" class="anchor"><span class="text-panel">Panel </span>4</a></li>
+            <li><a href="#panel-5" class="anchor"><span class="text-panel">Panel </span>5</a></li>
             <li><a href="#final" class="anchor">Final</a></li>
           </ul>
         </header>
@@ -105,7 +105,7 @@
           <!-- INICIAN LOS PANELES LATERALES -->
           <section id="panels" class="paneles">
             <!-- TODO LO QUE ESTE DENTRO DE ESTE DIV VA A CORRER DE FORMA HORIZONTAL -->
-            <div id="panels-container" style="width: 500%;" class="contenedor-paneles"> <!-- ACTUALIZAR ANCHO DEPENDIENDO DEL NUMERO DE SECCIONES -->
+            <div id="panels-container" class="contenedor-paneles"> <!-- ACTUALIZAR ANCHO DEPENDIENDO DEL NUMERO DE SECCIONES -->
               
               <!-- SEPARAR TODOS LOS CONTENEDORES POR ARTICULOS-->
               <article id="panel-1" class="panel full-screen panel-1">
@@ -168,6 +168,8 @@
           <section id="final" class="full-screen panel-final">
               <h1>Final</h1>
           </section>
+
+          
       
         </main>
       
@@ -176,83 +178,117 @@
       <progress max="100" value="0" id="progress"></progress>
 
     <script>
+      let alto = window.innerHeight,
+          ancho = window.innerWidth,
+          resolucion = document.body.clientWidth,
+          spans = document.querySelectorAll('span')
+
+      spans.forEach(value => {
+        value.addEventListener('click', () => {
+          let enlace = value.parentElement
+          enlace.click()
+        })
+      })
+
+      // console.log(resolucion);
+
       gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-      window. onscroll = function() {
-        var y = window. scrollY;
-        console. log(y);
-      }
-
-      let numero = window.scrollY.max
-      console.log(numero);
-
-      console.log(window.scrollY.end);
-
-      gsap.to('progress', {
-        value: 100,
-        ease: 'none',
+      // HACER NAVEGADOR NEGRO CUANDO SE HACE SCROLL
+      gsap.to('.header', {
         scrollTrigger: {
-          trigger: '#progress',
-          scrub: 0.3,
-          markers: true,
-          start: 0,
-          //end: 6222
-          end: 100
-        }
+          trigger: '.header',
+          // markers: true,
+          scrub: true,
+          start: 'top',
+          end: 500
+        },
+        background: 'black',
+        duration: 5
       })
 
 
-      ScrollTrigger.defaults({
-        toggleActions: "restart pause resume pause"
-      });
 
-      /* Main navigation */
-      const panelsSection = document.querySelector("#panels");
-      const panelsContainer = document.querySelector("#panels-container");
-      document.querySelectorAll(".anchor").forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-          e.preventDefault();
+      // window.addEventListener('resize', (event) => {
+      //   let medida = document.body.clientWidth
+      //   console.log(medida);
+        // SI LA RESOLUCION DE LA PANTALLA ES MAYOR A 700 ENTONCES SI HACER EFECTO LATERAL
+        if(resolucion > 700){
 
-          const targetElem = document.querySelector(e.target.getAttribute("href"));
-          if(targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
-            const containerOffset = panelsSection.offsetTop + targetElem.offsetLeft;
+          // multipliclar alto por numero de secciones verticales
+          // multiplicar ancho por numero de secciones horizontales - 1
+          alto = alto * 2
+          ancho = ancho * 4
+          scrollTotal = alto + ancho 
 
-            gsap.to(window, {
-              scrollTo: {
-                y: containerOffset,
-                autoKill: false
-              },
-              duration: 1
+          gsap.to('progress', {
+            value: 100,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '#progress',
+              scrub: 0.3,
+              markers: false,
+              start: 0,
+              //end: 6222
+              end: scrollTotal
+            }
+          })
+
+
+          ScrollTrigger.defaults({
+            toggleActions: "restart pause resume pause"
+          });
+
+          // Main navigation 
+          const panelsSection = document.querySelector("#panels");
+          const panelsContainer = document.querySelector("#panels-container");
+          document.querySelectorAll(".anchor").forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+              e.preventDefault();
+    
+              const targetElem = document.querySelector(e.target.getAttribute("href"));
+              if(targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
+                const containerOffset = panelsSection.offsetTop + targetElem.offsetLeft;
+    
+                gsap.to(window, {
+                  scrollTo: {
+                    y: containerOffset,
+                    autoKill: false
+                  },
+                  duration: 1
+                });
+              } else {
+                gsap.to(window, {
+                  scrollTo: {
+                    y: targetElem,
+                    autoKill: false
+                  },
+                  duration: 1
+                });
+              }
             });
-          } else {
-            gsap.to(window, {
-              scrollTo: {
-                y: targetElem,
-                autoKill: false
+          });
+    
+          // Panels 
+          const panels = gsap.utils.toArray("#panels-container .panel");
+          gsap.to(panels, {
+            xPercent: -100 * ( panels.length - 1 ),
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#panels-container",
+              pin: true,
+              start: "top top",
+              scrub: 1,
+              snap: {
+                snapTo: 1 / ( panels.length - 1 ),
+                duration: {min: 0.1, max: 0.1}
               },
-              duration: 1
-            });
-          }
-        });
-      });
-
-      /* Panels */
-      const panels = gsap.utils.toArray("#panels-container .panel");
-      gsap.to(panels, {
-        xPercent: -100 * ( panels.length - 1 ),
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#panels-container",
-          pin: true,
-          start: "top top",
-          scrub: 1,
-          snap: {
-            snapTo: 1 / ( panels.length - 1 ),
-            duration: {min: 0.1, max: 0.1}
-          },
-          end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
+              end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
+            }
+          });
         }
-      });
+      // })
+      
     </script>
   </body>
 </html>

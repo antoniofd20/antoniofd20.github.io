@@ -11,20 +11,23 @@ body {
 
 .body::-webkit-scrollbar {display: none;}
 
-/* navegador */
+/* ===========================================
+                navegador 
+   ===========================================*/
 .header {
   position: fixed;
   display: flex;
   z-index: 9999;
 
   min-width: 100%;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.233);
 }
 
 .navegador {
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 .navegador li {
@@ -56,6 +59,11 @@ a {
   color: white;
 }
 
+
+/* ===========================================
+                paneles 
+   ===========================================*/
+
 h1,
 h2 {
   text-align: center;
@@ -86,7 +94,9 @@ h2 {
   padding: 0;
   overflow: hidden;
   background-color: #ddd;
+  width: 500%;
 }
+
 
 .panel {
   position: relative;
@@ -116,6 +126,10 @@ h2 {
 }
 
 
+
+/* ===========================================
+                barra de progreso 
+   ===========================================*/
 progress {
   position: fixed;
   bottom: 0;
@@ -138,4 +152,39 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background: black;
   background-attachment: fixed;
+}
+
+
+/* ===========================================
+    ESTILOS QUE ADOPTA EN PANTALLAS PEQUENAS 
+   ===========================================*/
+@media screen and (max-width: 700px) {
+  .header {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .text-panel {
+    display: none;
+  }
+
+
+  .contenedor-paneles {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel {
+    display: block;
+    min-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  progress {
+    display: none;
+  }
 }
