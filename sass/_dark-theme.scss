@@ -5,7 +5,7 @@ $color-fondo-dark:#0d1216;
   background-color: $color-fondo;
 
   .panel {
-    .title {
+    .title, .subtitle, h4, p {
       color: var(--bg-color);
     }
   }

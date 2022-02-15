@@ -85,6 +85,48 @@ main {
         font-size: 2em;
         font-family: 'Merienda', cursive;
       }
+
+      &-education {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        h4 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.5em;
+          margin: 10px auto 0px 0px;
+        } 
+
+        span {
+          font-size: .8em;
+          font-style: italic;
+          color: var(--primariodark);
+        }
+
+        .degree, .school {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+        }
+        
+        .degree {
+          flex: 30%;
+          align-items: center;
+          
+          h4 {
+            margin: 10px auto;
+          }
+        }
+
+        .school {
+          flex: 70%;
+
+          p {
+            margin: 5px auto 5px 0px;
+          }
+        }
+      }
     }
     
   }
