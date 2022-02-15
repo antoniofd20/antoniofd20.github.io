@@ -1,0 +1,13 @@
+$color-fondo: rgba(0, 0, 0, 0.878);
+$color-fondo-dark:#0d1216;
+
+.dark-theme {
+  background-color: $color-fondo;
+
+  .panel {
+    .title {
+      color: var(--bg-color);
+    }
+  }
+
+}

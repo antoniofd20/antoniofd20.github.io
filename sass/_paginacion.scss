@@ -1,0 +1,42 @@
+h1 {
+  font-size: 64px;
+  color: var(--primario);
+}
+
+.paginacion ul {
+  margin: 40px 0 ;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: var(--color-text);
+
+      &:hover {
+        background-color: var(--primariohover);  
+        color: var(--dark-primary-solid);  
+      }
+    }
+  }
+
+  .active a {
+    background-color: var(--primario);
+  }
+
+  .disabled {
+    cursor: not-allowed;
+
+    a {
+      background-color: #c8c8c8;
+      color: #fff;
+    }
+  }
+}

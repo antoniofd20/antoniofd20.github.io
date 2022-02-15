@@ -1,0 +1,23 @@
+// Paleta de colores
+:root {
+  --bg-color: rgb(240, 240, 240);
+
+  --primario: orange;
+  --primariodark: rgb(212, 114, 1);
+  --primariolight: rgba(255, 166, 0, 0.63);
+  --primariohover: rgba(255, 166, 0, 0.445);
+
+  --sombreado: #dcece8;
+  --sombreado1: rgba(184, 217, 209, .7);
+  --color-resalta: white;
+  --title-color: #4d4d4d;
+
+  --color-text: #616161;
+  --color-border: #ccc;
+  --color-4EM: #00aee5;
+  
+  --font-text: 'Montserrat', Verdana, sans-serif, Geneva, Tahoma;
+  --font-title: 'Monoton', Helvetica, sans-serif;
+  --font-articles: 'News Cycle', Helvetica, sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+}

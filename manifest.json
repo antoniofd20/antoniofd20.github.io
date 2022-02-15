@@ -1,9 +1,9 @@
 {
   "name": "</>",
   "short_name": "</>",
-  "description": "Bienvenid@s a mi pagina, donde encontraras algunas utilidades web",
+  "description": "Bienvenid@s a mi pagina, dondé encontrarás información acerca de mi perfil y mi trabajo",
   "background_color": "#212121",
-  "theme_color": "#bd0812",
+  "theme_color": "#ffa500",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./?utm_source=web_app_manifest",

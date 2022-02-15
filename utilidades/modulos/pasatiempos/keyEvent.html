@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    
+    <!-- Metadatos básicos y codificación -->
+    <!-- ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Metadatos específicos para móvil -->
+    <!-- ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!-- Metadatos para posicionamiento en buscadores -->
+    <!-- ================================================== -->
+    <meta name="author" content="Raymundo Antonio Flores D.">
+    <meta name="copyright" content="RAFD" />
+    <!--
+    <link rel="canonical" href="http://www.erp-inspecciones-ttsa.com.mx">
+    <link rel="shortlink" href="http://www.erp-inspecciones-ttsa.com.mx">
+    -->
+
+
+    <!-- Iconos para página y dispositivos móviles -->
+    <!-- ================================================== -->
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <meta name="msapplication-TileImage" content="../../favicon.ico" />
+    <meta name="msapplication-TileColor" content="#488199" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/ico_empresa.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/ico_empresa.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/ico_empresa.png">
+    <link rel="apple-touch-icon" sizes="244x244" href="/img/ico_empresa.png">
+
+
+    <!-- BOOTSTRAP -->
+    <!-- ================================================== -->
+    <!-- <link rel="stylesheet" href="/librerias/bootstrap/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/librerias/bootstrap/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+
+    <!-- FONTAWESOME -->
+    <!-- ================================================== -->
+    <!-- <link rel="stylesheet" href="/librerias/fontawesome/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="/librerias/fontawesome/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- ================================================== -->
+    <!-- <script src="/librerias/jquery/jquery.min.js"></script> -->
+    <!-- <script src="/librerias/bootstrap/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- Estilos CSS -->
+    <!-- ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../css/estilos.css" />
+
+
+    <!-- Libreria GSAP para movimientos -->
+    <!-- ================================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+
+    <!-- Titulo -->
+    <!-- ================================================== -->
+    <title>Juego</title>
+  </head>
+  <body onkeypress="mostrarEvento()" onloadstart="intervalo()">
+    <!-- ENCABEZADO -->
+    <header>
+      <h1 class="title">KeyEvent</h1>
+      <p>Juega con las flechas del teclado </p>
+    </header>
+
+
+
+    <!-- CUERPO -->
+    <main class="container-figura">
+      <div class="area-juego">
+        <div class="figura"></div>
+        <div class="laser"></div>
+      </div>
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="botonera">
+        <button class="btn regresar" onclick="intervalo()">Iniciar / Reanudar</button>
+        <button class="btn regresar" onclick="Pausar()">Pausar</button>
+        <a href="../../index.html" class="btn regresar">Regresar</a>
+      </div>
+      Raymundo Antonio Flores Diaz
+    </footer>
+
+    <script>
+      let tl = gsap.timeline(),
+          tl2 = gsap.timeline(),
+          tl3 = gsap.timeline(),
+          tl4 = gsap.timeline(),
+          tl5 = gsap.timeline(),
+          area = document.querySelector(".area-juego"),
+          // OBTENER LAS COOREDENADAS LATERALES DEL AREA DE JUEGO
+          coords = area.getBoundingClientRect(),
+          areaY = coords.left,
+          areaX = coords.left + coords.width,
+          x = -400,
+          divLaser = document.querySelector(".laser")
+
+          console.log(areaY);
+          console.log(areaX);
+          console.log(coords.width);
+
+      const arriba = () => {
+        tl.to('.figura', {
+          duration: .3,
+          y: -100,
+          ease: 'ease' 
+        })
+
+        // tl.to('.figura', {
+        //   duration: .5,
+        //   y: 0,
+        //   ease: 'ease'
+        // })
+      }
+
+      const abajo = () => {
+        tl3.to('.figura', {
+          duration: .3,
+          y: 100,
+          ease: 'ease' 
+        })
+
+        // tl3.to('.figura', {
+        //   duration: .5,
+        //   y: 0,
+        //   ease: 'ease'
+        // })
+      }
+
+
+      const derecha = () => {
+        // console.log('Coordenada x: ' + x)
+        x = x + 150
+
+        tl2.to('.figura', {
+          duration: .3,
+          x: x,
+          ease: 'ease' 
+        })
+      }
+
+      const izquierda = () => {
+        // console.log('Coordenada x: ' + x)
+        x = x - 150
+
+        tl4.to('.figura', {
+          duration: .3,
+          x: x,
+          ease: 'ease' 
+        })
+      }
+
+      const Random = () => {
+        let coordY = Math.floor(Math.random() * 150) + 1
+        let modulo = coordY%2
+        if(modulo == 0){
+          coordY = -coordY
+        }
+
+        return coordY
+      }
+
+      let interval,
+          n = 0
+      function intervalo() {
+        interval = setInterval(() => {
+          n += 1
+          y = Random()
+          tl5.to('.laser', {
+            duration: 1,
+            x: -500,
+            y: y,
+            ease: 'linear'
+          })
+          y = Random()
+          tl5.to('.laser', {
+            duration: 1,
+            x: 400,
+            y: y,
+            ease: 'linear'
+          })
+          console.log(n);
+  
+          // if(n == 5){
+          //   clearInterval(interval)
+          //   n = 0
+          // }
+        }, 2000)
+
+      }
+
+      // intervalo()
+
+      const Pausar = () => {
+        clearInterval(interval)
+      }
+
+      let pausa = 0
+      const mostrarEvento = () => {
+        // COMPROBAR SI NO SE SALE A LA DERECHA
+        // if(event.key == 'p' && pausa == 0){
+        //   intervalo()
+        //   pausa = 1
+        // } else if(event.key == 'p' && pausa == 1){
+        //   console.log('Voy a pausar');
+        //   Pausar()
+        //   interval = ""
+        //   pausa = 0
+        // }
+
+        switch (event.key) {
+          case 'w':
+            arriba()
+            break;
+          case 's':
+            abajo()
+            break;
+        }
+
+        if(x < 400 && event.key == 'd') {
+          derecha()
+        } 
+
+        if(x > -400 && event.key == 'a'){
+          izquierda()
+        }
+      }
+
+    </script>
+  </body>
+</html>

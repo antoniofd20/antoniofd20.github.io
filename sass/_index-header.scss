@@ -1,0 +1,175 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  background-position: center;
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-image: url(../img/hero.jpg);
+  background-attachment: fixed;
+
+  // animation-delay: .9s;
+  // animation-duration: 2s;
+  // animation-timing-function: ease-in-out;
+  // animation-name: animationHero;
+  // animation-fill-mode: forwards;
+// 
+  // -webkit-animation-delay: .9s;
+  // -webkit-animation-duration: 2s;
+  // -webkit-animation-timing-function: ease-in-out;
+  // -webkit-animation-name: animationHero;
+  // -webkit-animation-fill-mode: forwards;
+
+  .nav {
+    z-index: 1;
+    width:100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
+    
+    
+    &-left, &-right {
+      position: relative;
+
+      a{
+        margin-right:20px;
+        font-weight: bolder;
+        color: var(--dark-primary-solid);
+
+        &:hover, &:visited, &:active, &:focus{
+          text-decoration: none;
+        }
+      }
+
+      i {
+        color: var(--dark-primary-solid);
+        
+         &:hover {
+           cursor: pointer;
+         }
+      }
+    }
+  }
+
+  .logo {
+    width: 20vw;
+    height: 30vh;
+  
+    background-position: center;
+    background-size: 0vw;
+    background-repeat: no-repeat;
+    background-image: url(../img/negro_1000.png);
+
+    animation-delay: 2.8s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: animationLogo;
+
+    -webkit-animation-delay: 2.8s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-name: animationLogo;
+
+    margin: 20vh auto auto 40vw;
+  }
+
+  hr {
+    height: 1px;
+    width: 0vw;
+    outline: none;
+    border: none;
+    background-color: orange;
+    position: absolute;
+    left: 10vw;
+
+    animation-delay: 3.6s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: animationHr;
+
+    -webkit-animation-delay: 3.6s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-name: animationHr;
+  }
+
+  .dev {
+    font-size: 100px;
+    color: black;
+    opacity: 0;
+    width: 100vw;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60vh;
+
+    animation-delay: 3.6s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: animationDev;
+
+    -webkit-animation-delay: 3.6s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-name: animationDev;
+  }
+}
+
+@keyframes animationHero {
+  from { background-size: 1vw; }
+  to { background-size: 100vw; }
+}
+
+@keyframes animationLogo {
+  from { background-size: 1%; }
+  to { background-size: 100%; }
+}
+
+@keyframes animationHr {
+  from { width: 0%; }
+  to { width: 80vw; }
+}
+
+@keyframes animationDev {
+  from { opacity: 0%; }
+  to { opacity: 100%; }
+}
+
+
+@media screen and (min-width: 1001px) {
+  .hero {
+    background-size: cover;
+
+    animation-delay: .9s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-name: animationHero;
+    animation-fill-mode: forwards;
+  
+    -webkit-animation-delay: .9s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: animationHero;
+    -webkit-animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    background-size: cover;
+
+    .logo {
+      width: 40vw;
+      height: 35vh;
+      margin: 20vh auto auto 30vw;
+    }
+  }
+}

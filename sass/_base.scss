@@ -1,0 +1,72 @@
+/* ESTILOS BASE Y NORMALIZADOR */
+/* ==================================================== */
+* {
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--color-text);
+  // background-color: var(--dark-primary-solid);
+  background-color: var(--bg-color);
+}
+header,
+footer {
+  margin: auto;
+  padding: auto;
+  padding-top: 2em;
+  padding-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  padding: 0;
+}
+
+
+footer{
+  margin-bottom: 1.5rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: auto;
+  font-family: var(--font-title);
+}
+ul {
+  list-style: none;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-text);
+}
+a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+input[type="checkbox"]{
+  min-width: 20%;
+  max-width: 20%;
+}
+textarea{
+  resize: none;
+  width: 100%;
+  padding: 0.5em;
+}
+textarea::placeholder, input::placeholder{
+  font-style: italic;
+}
+p {
+  margin-bottom: 2rem;
+}
+

@@ -1,55 +1,23 @@
+// Function to add loader
+
 let $divLoader = document.createElement("div")
+
 $divLoader.id = 'loader'
 $divLoader.className = 'loader'
 
-// Agregar div al documento
+// Add div to document
 document.body.appendChild($divLoader)
 
-// Crear imagen
+// Create image
 let $img = new Image()
-$img.src = "../img/ray_flores.png"
+$img.src = "./img/ray_flores.png"
 $img.className = "loader-img"
 
 $divLoader.appendChild($img)
 
-// Crear lista
+// Create list
 let $ul = document.createElement("ul"),
-    // // LETRA C
-    // $li1 = document.createElement("li"),
-    // li1Texto = document.createTextNode("C"),
-    // // LETRA A
-    // $li2 = document.createElement("li"),
-    // li2Texto = document.createTextNode("A"),
-    // // LETRA R
-    // $li3 = document.createElement("li"),
-    // li3Texto = document.createTextNode("R"),
-    // // LETRA G
-    // $li4 = document.createElement("li"),
-    // li4Texto = document.createTextNode("G"),
-    // // LETRA A
-    // $li5 = document.createElement("li"),
-    // li5Texto = document.createTextNode("A"),
-    // // LETRA N
-    // $li6 = document.createElement("li"),
-    // li6Texto = document.createTextNode("N"),
-    // // LETRA D
-    // $li7 = document.createElement("li"),
-    // li7Texto = document.createTextNode("D"),
-    // // LETRA O
-    // $li8 = document.createElement("li"),
-    // li8Texto = document.createTextNode("O")
-
-
-    // ulcontent = `<li>C</li>
-    //              <li>A</li>
-    //              <li>R</li>
-    //              <li>G</li>
-    //              <li>A</li>
-    //              <li>N</li>
-    //              <li>D</li>
-    //              <li>O</li>`
-
-    text = 'CARGANDO',
+    text = 'LOADING',
     arrayText = text.split(""),
     $fragment = document.createDocumentFragment()
 
@@ -59,57 +27,17 @@ let $ul = document.createElement("ul"),
       $fragment.appendChild($li)
     })
 
-// $li1.appendChild(li1Texto);
-// $li2.appendChild(li2Texto);
-// $li3.appendChild(li3Texto);
-// $li4.appendChild(li4Texto);
-// $li5.appendChild(li5Texto);
-// $li6.appendChild(li6Texto);
-// $li7.appendChild(li7Texto);
-// $li8.appendChild(li8Texto);
-
-// $ul.appendChild($li1);
-// $ul.appendChild($li2);
-// $ul.appendChild($li3);
-// $ul.appendChild($li4);
-// $ul.appendChild($li5);
-// $ul.appendChild($li6);
-// $ul.appendChild($li7);
-// $ul.appendChild($li8);
-
 $ul.className = "loading-list"
-// $ul.innerHTML = ulcontent
 $ul.appendChild($fragment)
-
 
 $divLoader.appendChild($ul)
 
-// Agregar div al documento
-// document.body.appendChild(divLoader)
 
+// Hidden
+const OcultarLoader = () => $divLoader.style.display = "none";
 
-// SIMULAR RETARDO 
-// const Retardo = segundos => {
-//     return new Promise((resolve, reject) => {
-//       setTimeout(() => {
-//           // alert(`Ya han pasado ${segundos / 1000} segundos`)
-//             if(document.readyState == 'complete'){
-//                 resolve();
-//             }
-//         }, segundos);
-//     })
-// }
-
-// OCULTAR INMEDIATO
-const OcultarLoader = () => {
-  // let divLoader = document.getElementById("loader")
-
-  $divLoader.style.display = "none"
-}
-
-// OCULTAR FADEOUT
+// Fadeout 
 const fadeOut = () => {
-  // let loader = document.getElementById("loader")
       
   const fadeEffect = setInterval(function () {
     if (!$divLoader.style.opacity) {
@@ -127,13 +55,12 @@ const fadeOut = () => {
   
 }
 
+// Slide up
 const slideUp = () => {
-  $divLoader.style.top = `${0}vh`;
-  // console.log(divLoader.style.top)
-  // divLoader.style.height = 0 + "px"
   let numero = 0;
+  $divLoader.style.top = `${0}vh`;
+
   const slideUpEffect = setInterval(() => {
-    // console.log(divLoader.style.top)
     if($divLoader.style.top !== "-100vh"){
       numero -= 1;
       $divLoader.style.top = `${numero}vh`
@@ -152,12 +79,6 @@ const Retardo = segundos => {
         resolve();
       }
     }, segundos);
-    // setTimeout(() => {
-    //     // alert(`Ya han pasado ${segundos / 1000} segundos`)
-    //       if(document.readyState == 'complete'){
-    //           resolve();
-    //       }
-    //   }, segundos);
   })
 }
 
@@ -170,14 +91,7 @@ const Ejecuta = async () => {
   }
 }
 
+// While the document is loading 
 if(document.readyState == 'loading'){
-    // Retardo(1000).then(() => slideUp())
-    //              .catch(() => console.log("Error"))
     Ejecuta()
 }
-
-// Retardo(3000);
-
-// $(document).loading(function(){
-
-// })

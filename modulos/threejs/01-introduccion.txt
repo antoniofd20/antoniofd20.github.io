@@ -1,0 +1,20 @@
+// ==========================================================================
+//          LIBRERIA THREE JS PARA DISEÑOS 3D Y ANIMACIONES
+// ==========================================================================
+
+Three JS es una libreria de JavaScript que facilita el uso de componentes 2D 
+y 3D en nuestra pagina web usando unicamente JavaScript.
+
+Three js está construida sobre la base de WebGL, el cual nos permite crear modelos
+3D mas elaborados, con escenas, materiales, texturas y de una manera mas facil.
+
+La pagina oficial de la libreria es:    threejs.org
+Donde encontraremos documentacion, ejemplos, códigos y demás.
+
+
+-- LA ESTRUCTURA GENERAL DE THREE JS SE COMPONE POR:
+
+1.- Escena (Lienzo donde vamos a nuestros elementos graficos).
+    Una escena puede contar con luces, objetos y formas (geometria y material)
+2.- Cámara.
+3.- Renderer (Toma todo lo que esta en la camara para mostrarlo).
