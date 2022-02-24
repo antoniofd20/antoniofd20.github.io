@@ -12,8 +12,8 @@ export default function carrusel(cards) {
       mover = 0, card = 0
 
   if(screen.width > 900) desplazamiento = desplazamiento -130
-  else if(screen.width > 700 && screen.width < 900) desplazamiento = desplazamiento -90
-  else desplazamiento = desplazamiento - 40
+  else if(screen.width > 700 && screen.width < 900) desplazamiento = desplazamiento -50
+  else desplazamiento = desplazamiento - 20
   // console.log(screen.width)
 
   function reproducirVideo(tarjetaActiva) {

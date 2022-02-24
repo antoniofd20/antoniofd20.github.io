@@ -74,18 +74,26 @@
 
 
   &-btn {
-    width: 120px;
-    height: 25%;
+    width: 10vw;
+    //height: 80px;
+    height: calc((50vw / 10) * 5.5);
+    // background-color: rgba(0, 0, 0, 0.802);
+    // border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    top: 35%;
+    bottom: calc(80px + (100% / 8));
+
+    i {
+      color: var(--bg-color);
+    }
 
     &:hover {
       cursor: pointer;
+      transform: scale(1.2);
     }
   }
 
@@ -103,7 +111,16 @@
 @media screen and (max-width: 1075px) {
   .carrusel {
     .card {
+      width: 60vw;
+      min-width: 60vw;
+      height: calc((60vw / 10) * 5.5);
+      margin: 5vw 5vw;
+
       .content {
+        .subtitle {
+          display: none;
+        }
+
         p {
           font-size: .6em;
         }
