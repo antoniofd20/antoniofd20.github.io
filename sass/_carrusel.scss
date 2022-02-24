@@ -1,0 +1,90 @@
+.carrusel {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 30px;
+  padding: 0 14.5vw;
+
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+
+  // padding-left: 14.5vw;
+
+  .card {
+    width: 50vw;
+    min-width: 50vw;
+    height: calc((50vw / 10) * 5.5);
+    margin: 5vw 5vw;
+
+    //background-color: burlywood;
+    transition: 1s ease;
+    
+    .content {
+      width: 100%;
+      height: 100%;
+      padding: 10px 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .uno {
+      background-image: url(../img/project-1.jpg);
+    }
+    .dos {
+      background-image: url(../img/project-2.jpg);
+    }
+    .tres {
+      background-image: url(../img/project-3.jpg);
+    }
+    .cuatro {
+      background-image: url(../img/project-4.jpg); 
+    }
+    .cinco {
+      background-image: url(../img/project-5.jpg); 
+    }
+  }
+
+
+  .active {
+    transform: scale(1.2);
+    margin: auto 5vw;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+
+
+  &-btn {
+    width: 120px;
+    height: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 35%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .atras {
+    left: 0;
+  }
+
+  .siguiente {
+    right: 0;
+    left: auto;
+  }
+}

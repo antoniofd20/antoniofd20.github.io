@@ -8,10 +8,10 @@ export default function scroll() {
   let moon = 'fas fa-moon enlace icons icon-dark',
       sun = 'fas fa-sun enlace icons icon-dark'
 
-  console.log(alto)
-  console.log(ancho)
+  //console.log(alto)
+  //console.log(ancho)
   
-  window.addEventListener("scroll", () => {
+  /*window.addEventListener("scroll", () => {
     //console.log(window.scrollY)
     let color = '#bdbdbd';
     
@@ -22,7 +22,7 @@ export default function scroll() {
 
     if(window.scrollY >= altura - 60) $enlaces.forEach(el => el.style.color = color)
     else $enlaces.forEach(el => el.style.color = 'black')
-  })
+  })*/
 
   // SI LA RESOLUCION DE LA PANTALLA ES MAYOR A 700 ENTONCES SI HACER EFECTO LATERAL
   if(resolucion > 1075){

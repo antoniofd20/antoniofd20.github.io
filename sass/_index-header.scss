@@ -23,11 +23,13 @@
   .nav {
     z-index: 1;
     width:100vw;
-    height: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
     position: fixed;
     justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.72);
     
     
     &-left, &-right {
@@ -36,7 +38,7 @@
       a{
         margin-right:20px;
         font-weight: bolder;
-        color: var(--dark-primary-solid);
+        color: var(--bg-color);
 
         &:hover, &:visited, &:active, &:focus{
           text-decoration: none;
@@ -44,7 +46,7 @@
       }
 
       i {
-        color: var(--dark-primary-solid);
+        color: var(--bg-color);
         
          &:hover {
            cursor: pointer;
