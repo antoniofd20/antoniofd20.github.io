@@ -23,31 +23,41 @@
     .content {
       width: 100%;
       height: 100%;
-      padding: 10px 20px;
+      padding: 10px 8px;
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 5px;
 
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      color: var(--bg-color);
+
+      .subtitle {
+        margin: 10px auto;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Merienda', cursive;
+      }
       
     }
     
     .uno {
-      background-image: url(../img/project-1.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(../img/project-1.jpg);
     }
     .dos {
-      background-image: url(../img/project-2.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(../img/project-2.jpg);
     }
     .tres {
-      background-image: url(../img/project-3.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(../img/project-3.jpg);
     }
     .cuatro {
-      background-image: url(../img/project-4.jpg); 
+      background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(../img/project-4.jpg); 
     }
     .cinco {
-      background-image: url(../img/project-5.jpg); 
+      background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(../img/project-5.jpg); 
     }
   }
 
@@ -86,5 +96,18 @@
   .siguiente {
     right: 0;
     left: auto;
+  }
+}
+
+
+@media screen and (max-width: 1075px) {
+  .carrusel {
+    .card {
+      .content {
+        p {
+          font-size: .6em;
+        }
+      }
+    }
   }
 }

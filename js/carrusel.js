@@ -1,6 +1,7 @@
 // La funcion recibe el numero de cards que se tienen
 
 export default function carrusel(cards) {
+  console.log('Entre al carrusel')
   const $carrusel = document.querySelector('.carrusel'),
         $cards = $carrusel.querySelectorAll('.card'),
         anchoCarrusel = $carrusel.scrollWidth,
@@ -16,14 +17,14 @@ export default function carrusel(cards) {
   // console.log(screen.width)
 
   function reproducirVideo(tarjetaActiva) {
-    tarjetaActiva.firstElementChild.style.display = 'block'
+    tarjetaActiva.firstElementChild.style.display = 'flex'
     tarjetaActiva.lastElementChild.style.display = 'none'
     tarjetaActiva.firstElementChild.play();
   }
 
   function mostrarImagen(tarjetaActiva) {
     tarjetaActiva.firstElementChild.style.display = 'none'
-    tarjetaActiva.lastElementChild.style.display = 'block'
+    tarjetaActiva.lastElementChild.style.display = 'flex'
     tarjetaActiva.firstElementChild.currentTime = 0;
   }
 
